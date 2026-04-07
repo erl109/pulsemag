@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseMag Admin | Krijo Postim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <section class="admin-card">
+      <div class="admin-header">
+        <div>
+          <p class="eyebrow">PulseMag Basic Panel</p>
+          <h1>Krijo nje postim te ri</h1>
+        </div>
+        <a class="back-link" href="./index.html">Shko te faqja</a>
+      </div>
+
+      <div id="config-banner" class="config-banner">
+        Po kontrollohet lidhja me WordPress.com...
+      </div>
+
+      <section class="automation-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">AI Posting Agent</p>
+            <h2>Automatizo postimet cdo 30 minuta</h2>
+          </div>
+          <div id="automation-status-badge" class="status-badge idle">Ndalur</div>
+        </div>
+
+        <p class="automation-copy">
+          Ndërto një listë me hapa automatizimi. Çdo rresht ka kategorinë, nënkategorinë, vonesën në minuta, statusin dhe opsionin e fotos. Agjenti do t'i ekzekutojë njëri pas tjetrit në rendin që vendos.
+        </p>
+
+        <form id="automation-form" class="post-form automation-form">
+          <div class="automation-toolbar">
+            <p class="helper">Plotëso rreshtat që do. Të tjerët mund t'i lësh bosh. Agjenti kalon ciklikisht nga hapi 1 te i fundit.</p>
+          </div>
+
+          <div class="preset-toolbar">
+            <label class="preset-name-field">
+              <span>Preset name</span>
+              <input id="preset-name" type="text" placeholder="Shembull: Dita 1 sport + tech">
+            </label>
+
+            <label class="preset-load-field">
+              <span>Load preset</span>
+              <select id="preset-select">
+                <option value="">Zgjidh preset-in</option>
+              </select>
+            </label>
+
+            <div class="preset-actions">
+              <button id="save-preset-button" class="secondary-button" type="button">Save preset</button>
+              <button id="load-preset-button" class="secondary-button" type="button">Load preset</button>
+            </div>
+          </div>
+
+          <div id="automation-steps" class="automation-steps"></div>
+
+          <div class="actions">
+            <button id="automation-start-button" type="submit">Nis agjentin</button>
+            <button id="automation-stop-button" class="secondary-button" type="button">Ndal agjentin</button>
+          </div>
+        </form>
+
+        <div id="automation-state" class="config-banner">
+          Po lexohet statusi i agjentit...
+        </div>
+      </section>
+
+      <form id="post-form" class="post-form">
+        <label>
+          <span>Titulli</span>
+          <input id="title" name="title" type="text" placeholder="Shembull: Ronaldo shenon dopiete" required>
+        </label>
+
+        <label>
+          <span>Kategoria</span>
+          <select id="category" name="category">
+            <option>Sport</option>
+            <option>Teknologji</option>
+            <option>Lifestyle</option>
+            <option>Kulture</option>
+            <option>Argetim</option>
+          </select>
+        </label>
+
+        <label id="subcategory-field" hidden>
+          <span>Nenkategoria</span>
+          <select id="subcategory" name="subcategory">
+            <option value="">Zgjidh nenkategorine</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Permbledhja</span>
+          <textarea id="excerpt" name="excerpt" rows="3" placeholder="2-3 fjali te shkurtra per kartat e homepage-it."></textarea>
+        </label>
+
+        <label>
+          <span>Permbajtja</span>
+          <textarea id="content" name="content" rows="10" placeholder="Shkruaj tekstin e plote te artikullit..." required></textarea>
+        </label>
+
+        <label>
+          <span>Foto e artikullit</span>
+          <input id="image" name="image" type="file" accept="image/png,image/jpeg,image/jpg,image/gif">
+        </label>
+
+        <label>
+          <span>Statusi</span>
+          <select id="status" name="status">
+            <option value="draft">Ruaj si draft</option>
+            <option value="publish">Publiko direkt</option>
+          </select>
+        </label>
+
+        <div class="actions">
+          <button id="submit-button" type="submit">Dergo ne WordPress</button>
+          <p class="helper">Paneli punon lokalisht per te ruajtur te sigurt token-in e WordPress.com.</p>
+        </div>
+      </form>
+
+      <div id="result" class="result" hidden></div>
+    </section>
+  </main>
+
+  <script src="./admin.js"></script>
+</body>
+</html>

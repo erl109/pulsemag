@@ -1,0 +1,21 @@
+{
+  "running": false,
+  "steps": [],
+  "currentStepIndex": 0,
+  "currentStep": null,
+  "nextRunAt": null,
+  "lastRunAt": "2026-03-27T23:30:07.768Z",
+  "lastResult": {
+    "success": true,
+    "postId": 105,
+    "link": "http://pulsemag.net/2026/03/28/filmi-the-little-boy-who-went-missing-zbulon-sekretet-e-ciftit-te-persosur/",
+    "title": "Filmi &#8216;The Little Boy Who Went Missing&#8217; Zbulon Sekretet e Çiftit të Përsosur",
+    "status": "publish",
+    "facebook": {
+      "enabled": true,
+      "published": true,
+      "id": "1119092894610565_122099089694893212"
+    }
+  },
+  "lastError": ""
+}
