@@ -160,7 +160,7 @@ const CATEGORY_CONFIG = [
       key: "argetim",
       name: "Argetim",
       slug: "argetim",
-      description: "Showbiz, muzikÃ« dhe ritmi i ekranit nÃ« njÃ« vend tÃ« vetÃ«m.",
+      description: "Showbiz, muzikë dhe ritmi i ekranit në një vend të vetëm.",
       accent: "#6366f1",
       subcategories: ENTERTAINMENT_SUBCATEGORIES
   }
